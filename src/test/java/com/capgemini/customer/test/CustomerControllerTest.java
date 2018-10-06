@@ -125,7 +125,7 @@ public class CustomerControllerTest {
 	public void testDeletecustomer() throws Exception 
 	{
 		//String content="{\"customerId\":12345,\"customerName\":\"TV\",\"customerCategory\":\"LED\",\"customerPrice\":10000.0}";
-		when(customerService.findCustomerById(12345)).thenReturn(new Customer(12345,"machine", 25, "art", 100));
+//		when(customerService.findCustomerById(12345)).thenReturn(new Customer(12345,"machine", 25, "art", 100));
 		mockMvc.perform(delete("/customers/12345"))
 		.andDo(print())
 		.andExpect(status().isOk());

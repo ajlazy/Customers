@@ -37,7 +37,7 @@ public static void main(String[] args) {
 	
 	public static Customer addCustomer(String url,Customer customer)
 		{
-			 REST_TEMPLATE.put(url, customer);
+			 REST_TEMPLATE.postForObject(url, customer,Customer.class);
 			return customer;
 			 
 			
